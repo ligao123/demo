@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>编号</th>
+        <th>年龄</th>
+        <th>尺寸</th>
+    </tr>
+    <tr>
+        <td><input type="text" name="id" th:value="${girl.id}" readonly="readonly" id="girlId"/></td>
+        <td><input type="text" name="age" th:value="${girl.age}" id="ageAtrr"/></td>
+        <td><input type="text" name="cupSize" th:value="${girl.cupSize}" id="cupSizeAtrr"/></td>
+        <td><input type="button" value="确定" id="updateSuccess"/></td>
+    </tr>
+</table>
+</body>
+</html>

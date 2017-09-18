@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>编号</th>
+            <th>年龄</th>
+            <th>类型</th>
+            <th>操作</th>
+        </tr>
+        <tr th:each="prod: ${plist}">
+            <td th:text="${prod.id}"></td>
+            <td th:text="${prod.age}"></td>
+            <td th:text="${prod.cupSize}"></td>
+            <td><a href="#"><input type="button" value="增加" id="coustm"/></a></td>
+            <td><input type="button" value="删除" th:onclick="'deleteGirl('+${prod.id}+')'"/></td>
+            <td><input type="button" value="修改" th:onclick="'editGirl('+${prod.id}+')'" /></td>
+        </tr>
+     <!--  <a th:href="@{'/edit/'+${prod.id}}" id="updateId">-->
+    </table>
+
+</body>
+</html>
